@@ -1,0 +1,10 @@
+$darkBlue: #12232e;
+$lighterBlue: #007cc7;
+$lightestBlue: #4da8da;
+$shadowLightBlue: #70b8df;
+$lightGrey: #a8a8a8;
+
+::selection {
+  background: $darkBlue;
+  color: $shadowLightBlue;
+}

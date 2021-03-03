@@ -1,0 +1,91 @@
+@import "utilities";
+@import "config";
+* {
+  text-decoration: none;
+}
+
+.firstHeader {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $lighterBlue;
+  padding: 0 5%;
+
+  .logoWrapper {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .headerLinksWrapper {
+    padding: 10px;
+    .headerLinks {
+      li {
+        display: inline-block;
+        color: white;
+        margin: 10px;
+        width: auto;
+        padding: 10px;
+        border-radius: 30px;
+        background-color: rgba(77, 168, 218, 0);
+        transition: all 0.2s;
+      }
+      li:hover {
+        background-color: rgba(77, 168, 218, 1);
+      }
+    }
+  }
+
+  .searchWrapper {
+    min-width: 25%;
+    form {
+      fieldset {
+        border: none;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 50px;
+        padding-right: 10px;
+        outline: none;
+        background-color: $shadowLightBlue;
+      }
+    }
+  }
+}
+
+#magnifyingGlass {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKcSURBVHgBvVfRceIwEF2ZBkgH7uCSCvBVAFcBvgou+bwPsD3wn6SCmAouV8E5FcQdnPKXzzQA5C0jMmKRbYE1vBkNaLV6fl6tpLUiD+R5PhwMBtPtdpuge40W78dgq5VSGu15vV6/wFfTGVDULiDBAzK0hPxRbjab4lRBqkHAMIqiDH9v6Xw8GEEfPs7KISKGiH9khb8HNMR894lO5CsCuVBhiW5BfIN2NZ/PFf9yn+2cKw7+HR/zUgeUJYKX49Uhgt/qJ8arDi7mmIDjvoHjpm2ZviJicuKAAG+5MgQVeQB+z+zP88RQbPgboQwBO/6XIrIsS+lMFEVRYsmmts3kS+Xy30UEE3Jh1xDSZ8eQma9tGx8FTf7KFQ0o/8Fhpp7gc8gkv8195coV+EWJsNUhRBghFe828cDU5RshXGNhW1FAgP+v3TfXxLEQDMS2AaGrKCAkH4R9c/lxsl4Lm6aw0KIfU4OQA/jeDb7w5XMJGVJA+PKxEC1sMYVFLPq1UwiS52DAsZ17QfJhc7w5/TDwIhzHFBZTIeyPyynC9iptA1djfCJSAPBtTGJXcjnp8o04qx2n31PfpDVlxb0wl01F0m7XQEgh7LGD5CS46hIuHZv8vwojXNsPWJZfYpwL4btTzhYrEqltx8s+oqxovNEjyzGn462cctW2XC69Etjctq9SBAMvpNvmKkHUVrPWGCtNsmmOksmjGN88Izxo0vXZgfF0NputOoV0iQmBJjGuI16buvOResDMv3PYy8ViMT0S2EbG0eEyUtaeHQK4GCr2tSl+Oc+ejh4sIqN8yM1yJfg75voFJPYhpdH4+7dC/qxcO8xHjJeQEOgSczEhXWIuKqRFzMeALoyqqurRaPSGKEws8/vFhQgx+6T//QnonHH2sKAyywAAAABJRU5ErkJggg==)
+    no-repeat 0 0/100%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+
+.searchbarColorChangeForward {
+  animation-name: searchbarColorChange;
+  animation-timing-function: linear;
+  animation-duration: 0.2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.searchbarColorChangeReverse {
+  animation-name: searchbarColorChange;
+  animation-timing-function: linear;
+  animation-duration: 0.2s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+
+@keyframes searchbarColorChange {
+  from {
+    background-color: $shadowLightBlue;
+  }
+  to {
+    background-color: white;
+  }
+}
