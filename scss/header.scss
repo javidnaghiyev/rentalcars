@@ -30,7 +30,7 @@
         padding: 10px;
         border-radius: 30px;
         background-color: rgba(77, 168, 218, 0);
-        transition: all 0.2s;
+        transition: background-color 0.2s;
       }
       li:hover {
         background-color: rgba(77, 168, 218, 1);
@@ -49,7 +49,7 @@
         height: 40px;
         border-radius: 5px;
         border: none;
-        padding-left: 50px;
+        padding-left: 40px;
         padding-right: 10px;
         outline: none;
         background-color: $shadowLightBlue;

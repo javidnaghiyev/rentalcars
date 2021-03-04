@@ -3,7 +3,7 @@ $(document).ready(function(){
     let lupaHeight = (generalSearch - $("#magnifyingGlass").height())/2
     $("#magnifyingGlass").css({
         marginLeft: "15px",
-        marginTop: `${lupaHeight}px`
+        marginTop: `${lupaHeight+1}px`
     })
 
     var searchCharacter = $("#generalSearch").val().length;
