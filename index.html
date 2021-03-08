@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -23,14 +26,14 @@
                     <img src="./images/2020-Audi-S7-Sportback-V1-2160.jpg" class="d-block" alt="...">
                 </div>
 
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                </a>
+                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
 
         </div>
@@ -38,31 +41,44 @@
         <div class="specificSearchWrapper">
             <div class="specificSearch">
                 <div class="searchCTA">
-
+                    <h1>Any car<br /> you need</h1>
                 </div>
                 <div class="searchDetails">
                     <form>
                         <div>
                             <div class="row">
                                 <div class="inputHolder">
-                                    
+                                    <label for="floatingInput">Pick-up location</label>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="New York City">
+
                                 </div>
                                 <div class="inputHolder">
-                                                                
+                                    <label for="floatingInput">Drop-off location</label>
+                                     <input type="text" class="form-control" id="floatingInput" placeholder="Los Angeles">
                                 </div>
                                 <div class="inputHolder">
-                                
+                                    <label for="carType">Type of car</label>
+                                    <select id="carType" class="form-select" aria-label="Default select example">
+                                        <option selected>Select</option>
+                                        <option value="1">Sedan</option>
+                                        <option value="2">SUV</option>
+                                        <option value="3">Hatchback</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div id="timeInputsRow" class="row">
                                 <div class="inputHolder">
-                                
+                                    <label>Pick-up date and time</label>
+                                    <input type="date">
+                                    <input type="time"> 
                                 </div>
                                 <div class="inputHolder">
-                                
+                                    <label>Drop-off date and time</label>
+                                     <input type="date">
+                                     <input type="time">
                                 </div>
                                 <div class="inputHolder">
-                                
+                                    <button class="button-lg" type="submit">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -70,10 +86,57 @@
                 </div>
             </div>
         </div>
+
+        <div id="aboutUsWrapper">
+            <div id="aboutUs">
+                <div id="whyUs">
+                    <p>Why Us?</p>
+                </div>
+                <div class="aboutUsText">
+                    <div id="aboutUs1" data-aos="fade-right">
+                        <p>
+                            Best price guarantee - in the unlikely event you find a lower Hertz price, we'll refund the difference
+                            No cancellation or change fees*
+                            *When the booking is cancelled within two days of being made.
+                            No credit card fees
+                            Gold Standard Clean
+                            We’re rolling out a 15-step cleaning process across our fleet. We seal each car so you know it's safe.
+                        </p>
+                    </div>
+                    <div id="aboutUs2" data-aos="fade-left">
+                        <p>
+                            Rent a car in Colorado and adventure through lush green forests, snowy mountains and expansive deserts.
+                            
+                            Known affectionately as ‘Colorful Colorado’ for its vast range of landscapes, the Centennial State is the perfect base
+                            for a journey into the great outdoors.
+                            
+                        </p>
+                        <ul>
+                            <li><i>&#10003;</i>Easy and simple ordering process</li>
+                            <li><i>&#10003;</i>Wide variety of cars</li>
+                            <li><i>&#10003;</i>Below average prices</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div id="hotCarsWrapper">
+                <div id="hotCars">
+                    <div class="bannerText">
+                        <h1>Hot cars right now</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./index.js"></script>
-<script src="./bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script src="./bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
