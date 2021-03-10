@@ -1,7 +1,17 @@
 @import "utilities";
 @import "config";
 * {
+  text-decoration: none !important;
+}
+a {
+  color: $blackText;
   text-decoration: none;
+}
+
+a:hover {
+  color: $blueAccent;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .firstHeader {
@@ -11,8 +21,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $lighterBlue;
+  background-color: $white;
   padding: 0 5%;
+  border-bottom: $lightBorder;
 
   .logoWrapper {
     font-size: 1.5rem;
@@ -24,16 +35,21 @@
     .headerLinks {
       li {
         display: inline-block;
-        color: white;
+        color: $blackText;
         margin: 10px;
         width: auto;
         padding: 10px;
         border-radius: 30px;
-        background-color: rgba(77, 168, 218, 0);
+        // background-color: rgba(77, 168, 218, 0);
         transition: background-color 0.2s;
-      }
-      li:hover {
-        background-color: rgba(77, 168, 218, 1);
+
+        a {
+          text-decoration: none !important;
+          :hover {
+            color: $blueAccent;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -52,7 +68,7 @@
         padding-left: 40px;
         padding-right: 10px;
         outline: none;
-        background-color: $shadowLightBlue;
+        background-color: $white;
       }
     }
   }

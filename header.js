@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    //Colours
+    let blueAccent = '#4b7bec'
+
     let generalSearch = $("#generalSearch").height();
     let lupaHeight = (generalSearch - $("#magnifyingGlass").height())/2
     $("#magnifyingGlass").css({
@@ -6,18 +9,29 @@ $(document).ready(function(){
         marginTop: `${lupaHeight+1}px`
     })
 
-    var searchCharacter = $("#generalSearch").val().length;
-    $("#generalSearch").on('keyup', function(){
-        searchCharacter = $("#generalSearch").val().length;
-
-        if (searchCharacter >= 1){
-            $("#generalSearch").removeClass('searchbarColorChangeReverse')
-            $("#generalSearch").addClass('searchbarColorChangeForward')
-        }else{
-            $("#generalSearch").removeClass('searchbarColorChangeForward')
-            $("#generalSearch").addClass('searchbarColorChangeReverse')
-        }
+    $("#generalSearch").on('click', function(){
+        $(this).css({
+            border: `1px solid ${blueAccent}`
+        })
     })
+    $("#generalSearch").blur(function(){
+        $(this).css({
+            border: 'none'
+        })
+    })
+
+    // var searchCharacter = $("#generalSearch").val().length;
+    // $("#generalSearch").on('keyup', function(){
+    //     searchCharacter = $("#generalSearch").val().length;
+
+    //     if (searchCharacter >= 1){
+    //         $("#generalSearch").removeClass('searchbarColorChangeReverse')
+    //         $("#generalSearch").addClass('searchbarColorChangeForward')
+    //     }else{
+    //         $("#generalSearch").removeClass('searchbarColorChangeForward')
+    //         $("#generalSearch").addClass('searchbarColorChangeReverse')
+    //     }
+    // })
     
     // $(".headerLinks li").on('mouseenter', function(){
     //     $(this).css({

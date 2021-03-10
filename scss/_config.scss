@@ -4,7 +4,8 @@ $lightestBlue: #c74c4c;
 $shadowLightBlue: #690500;
 $lightGrey: #a8a8a8;
 
-::selection {
-  background: $darkBlue;
-  color: $shadowLightBlue;
-}
+$white: #ffffff;
+$blackText: #121214;
+$greenAccent: #4ad493;
+$blueAccent: #4b7bec;
+$lightBorder: 1px solid rgba(0, 0, 0, 0.1);
