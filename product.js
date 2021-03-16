@@ -24,6 +24,8 @@ $(document).ready(function(){
         })
     })
 
+    $("img").attr('loading', 'lazy')
+
     $(document).on('keyup', function(e){
         if (e.key === 'Escape'){
             $('.mask').css({
@@ -33,22 +35,19 @@ $(document).ready(function(){
     })
 
     
-    $('h2').on('click', function(){
-    let homeRequest = new XMLHttpRequest();
-    homeRequest.open('GET', 'index.html')
-    homeRequest.onload = function(){
-        console.log(homeRequest.responseText);
-        let space = document.querySelector('main')
-        let newhtml = new Parser();
-        
-        if (this.status === 200){
-            $('main').children().css({display: 'none'})
-            space.insertAdjacentHTML('afterbegin', homeRequest.responseXML)
-        }else{
-            space.insertAdjacentHTML('afterbegin', 'ERROR 404')
-        }
-    }
-    homeRequest.send()
+    $('.logoWrapper').ready(function(){
+        $(this).on('click', function(){
+            window.location.href = 'index.html'
+        //     let homeRequest = new XMLHttpRequest();
+        //     homeRequest.onload = function(){
+        //     $('html').empty()
+        //     let space = document.querySelector('html')
+            
+        //     space.insertAdjacentHTML('afterbegin', homeRequest.responseText)
+        // }
+        // homeRequest.open('get', 'index.html');
+        // homeRequest.send()
+        })
     })
 
 })

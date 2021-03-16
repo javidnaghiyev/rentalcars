@@ -32,18 +32,35 @@
                     <form>
                         <div class="searchFlex">
                             <div class="where">
-                                <input type="text">
-                                <div class="floater">Address</div>
+                                <input id="make" type="text">
+                                <div class="floater">Marka</div>
+                                <ul class="makeList">
+                                    <li><a>Acura</a></li>
+                                    <li><a>Alfa Romeo</a></li>
+                                    <li><a>Aston Martin</a></li>
+                                    <li><a>Audi</a></li>
+                                    <li><a>Bentley</a></li>
+                                    <li><a>BMW</a></li>
+                                    <li><a>Buick</a></li>
+                                    <li><a>Cadillac</a></li>
+                                </ul>
                             </div>
-                            <div class="fromDate">
-                                <label>From</label>
-                                <input type="date">
-                                <input type="time">
+                            <div class="where">
+                                <input id="model" type="text">
+                                <div class="floater">Model</div>
+                                <ul class="modelList">
+                                    <li><a>Acura</a></li>
+                                    <li><a>Alfa Romeo</a></li>
+                                    <li><a>Aston Martin</a></li>
+                                    <li><a>Audi</a></li>
+                                    <li><a>Bentley</a></li>
+                                    <li><a>BMW</a></li>
+                                    <li><a>Buick</a></li>
+                                    <li><a>Cadillac</a></li>
+                                </ul>
                             </div>
-                            <div class="untilDate">
-                                <label>Until</label>
-                                <input type="date">
-                                <input type="time">
+                            <div class="where dropdown">
+                                
                             </div>
                             <button type="submit">
                                 <div class="searchIcon">
@@ -98,12 +115,62 @@
                 </div>
             </div>
             
-            <div id="hotCarsWrapper">
-                <div id="hotCars">
-                    <div class="bannerText">
-                        <h1>Hot cars right now</h1>
-                    </div>
+            
+        </div>
+        <div id="hotCarsWrapper">
+            <div id="hotCars">
+                <div class="bannerText">
+                    <h1>Hot cars right now</h1>
                 </div>
+                <div class="wrapper">
+                    <ul class="productGrid">
+                        <li class="productItem">
+                            <a href="./product-page.html" class="hero">
+                                <div class="preloadWrap">
+                                    <img src="./images/mainbmw.jpg">
+                                </div>
+                            </a>
+                            <div class="metadata">
+                                <div class="salesTitle">
+                                    <a class="salesName">BMW M5 F10</a>
+                                </div>
+                                <p class="salesFeatures">Az sürülmüş, mexanika, birinci əl</p>
+                            </div>
+                        </li>
+
+                        <li class="productItem">
+                            <a class="hero">
+                                <div class="preloadWrap">
+                                    <img src="./images/mainbmw.jpg">
+                                </div>
+                            </a>
+                            <div class="metadata">
+                        
+                            </div>
+                        </li>
+                        <li class="productItem">
+                            <a class="hero">
+                                <div class="preloadWrap">
+                                    <img src="./images/mainbmw.jpg">
+                                </div>
+                            </a>
+                            <div class="metadata">
+                        
+                            </div>
+                        </li>
+                        <li class="productItem">
+                            <a class="hero">
+                                <div class="preloadWrap">
+                                    <img src="./images/mainbmw.jpg">
+                                </div>
+                            </a>
+                            <div class="metadata">
+                        
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        
             </div>
         </div>
     </main>
