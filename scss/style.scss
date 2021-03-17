@@ -84,6 +84,8 @@
         border-radius: 5px;
         border-top-left-radius: 0;
         border-left: 1px solid $blackText;
+        border-bottom: 1px solid $blackText;
+        border-right: 1px solid $blackText;
         li{
           padding: 5px;
         }

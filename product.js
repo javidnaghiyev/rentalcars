@@ -34,20 +34,5 @@ $(document).ready(function(){
         }
     })
 
-    
-    $('.logoWrapper').ready(function(){
-        $(this).on('click', function(){
-            window.location.href = 'index.html'
-        //     let homeRequest = new XMLHttpRequest();
-        //     homeRequest.onload = function(){
-        //     $('html').empty()
-        //     let space = document.querySelector('html')
-            
-        //     space.insertAdjacentHTML('afterbegin', homeRequest.responseText)
-        // }
-        // homeRequest.open('get', 'index.html');
-        // homeRequest.send()
-        })
-    })
 
 })
