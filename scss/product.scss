@@ -1,111 +1,244 @@
-@import 'utilities';
-@import 'config';
+@import "utilities";
+@import "config";
 
-.carTitle{
-    padding: 0 5%;
-    margin: 10px 0;
-    width: 100%;
-    height: 50px;
-    .carName{
-        font-weight: 700;
-    }
-    .carFeatures{
-        font-weight: 400;
-    }
+.carTitle {
+  padding: 0 5%;
+  margin: 10px 0;
+  width: 100%;
+  height: 50px;
+  .carName {
+    font-weight: 700;
+  }
+  .carFeatures {
+    font-weight: 400;
+  }
 }
 
-.carPhotos{
-    padding: 0 5%;
-    margin: 10px 0;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    .mainCar{
-        width: 65%;
-        margin-right: 3px;
-        img{
-            width: 100%;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
+.carPhotos {
+  padding: 0 3%;
+  margin: 10px 0;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .mainCar {
+    width: 65%;
+    height: 100%;
+    margin-right: 3px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
-    .preloadImages{
-        width: 35%;
-        height: inherit;
-        .preloadExterior{
-            height: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            position: relative;
-            margin-bottom: 0;
-            span{
-                position: absolute;
-                background-color: rgba(0,0,0,0.5);
-                padding: 3px 5px;
-                margin-left: 5px;
-                margin-top: 5px;
-                border-radius: 5px;
-                color: $white;
-                text-align: center;
-                font-weight: 500;
-                font-size: 0.8rem;
-            }
-            .preloadExteriorThumb{
-                overflow: hidden;
-                width: 49%;
-                margin: 0 2px;
-                img{
-                    width: 100%;
-                    height: 147px;
-                    object-fit: cover;
-                    // object-position: center;
-                }
-            }
+  }
+  .preloadImages {
+    width: 35%;
+    height: inherit;
+    .preloadExterior {
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+      margin-bottom: 0;
+      span {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 3px 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+        color: $white;
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+      .preloadExteriorThumb {
+        overflow: hidden;
+        width: 49%;
+        margin: 0 2px;
+        img {
+          width: 100%;
+          height: 147px;
+          object-fit: cover;
+          // object-position: center;
         }
-        .preloadInterior{
-            height: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            position: relative;
-            span{
-                position: absolute;
-                background-color: rgba(0,0,0,0.5);
-                padding: 3px 5px;
-                margin-left: 5px;
-                margin-top: 5px;
-                border-radius: 5px;
-                color: $white;
-                text-align: center;
-                font-weight: 500;
-                font-size: 0.8rem;
-            }
-            .preloadInteriorThumb{
-                display: inline-block;
-                overflow: hidden;
-                width: 49%;
-                margin: 0 2px;
-                img{
-                    width: 100%;
-                    height: 147px;
-                    object-fit: cover;
-                }
-            }
-        }
+      }
     }
+    .preloadInterior {
+      height: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+      span {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 3px 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+        color: $white;
+        text-align: center;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+      .preloadInteriorThumb {
+        display: inline-block;
+        overflow: hidden;
+        width: 49%;
+        margin: 0 2px;
+        img {
+          width: 100%;
+          height: 147px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
-.mask{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+.mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1330px) {
+  .carPhotos {
+    .mainCar {
+      width: 80%;
+    }
+    .preloadImages {
+      width: 20%;
+      .preloadExterior {
+        .preloadExteriorThumb {
+          width: 100%;
+        }
+      }
+      .preloadInterior {
+        .preloadInteriorThumb {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .carPhotos {
+    height: 500px;
+    .mainCar {
+      width: 80%;
+    }
+    .preloadImages {
+      width: 20%;
+      height: 500px;
+      .preloadExterior {
+        height: 250px;
+        display: block;
+        margin: 0;
+        .preloadExteriorThumb {
+          height: 123px;
+          margin-bottom: 2px !important;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .preloadInterior {
+        height: 250px;
+        display: block;
+        margin: 0;
+        .preloadInteriorThumb {
+          height: 123px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .carPhotos {
+    height: 400px;
+    .mainCar {
+      width: 85%;
+    }
+    .preloadImages {
+      width: 15%;
+      height: 400px;
+      .preloadExterior {
+        height: 200px;
+        display: block;
+        margin: 0;
+        .preloadExteriorThumb {
+          height: 98px;
+          margin-bottom: 2px !important;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .preloadInterior {
+        height: 200px;
+        display: block;
+        margin: 0;
+        .preloadInteriorThumb {
+          height: 98px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    #heroCarousel {
+      img {
+        min-width: 326px;
+        flex-grow: 1;
+        height: 100%;
+      }
+    }
+    .carousel-cell {
+      width: 328px;
+      height: 250px;
+      margin-right: 4px;
+      counter-increment: carousel-cell;
+    }
+    .preloadInterior768,
+    .preloadExterior768 {
+      left: 0;
+      margin-left: 4px;
+    }
+    .preloadExterior768 img,
+    .preloadInterior768 img {
+      width: 161px;
+      height: 123px;
+    }
+  }
 }

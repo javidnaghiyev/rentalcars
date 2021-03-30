@@ -84,6 +84,21 @@ function modelSearch(makebrand){
   const alfaromeoModels = [
     '156', '4C', 'GTV', 'Guilietta', 'Mito', 'Stelvio'
   ]
+  const astonmartinModels = [
+    'DB9', 'Rapide', 'Vanquish', 'Vantage'
+  ]
+  const audiModels =[
+    '100', '80', 'A1', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'R8', 'RS3', 'RS5', 'RS6', 'RS7', 'S4', 'S5', 'S6', 'S8', 'TT'
+  ]
+  const bentleyModels = [
+    'Bentayga', 'Continental', 'Flying Spur', 'Mulsanne'
+  ]
+  const bmwModels = [
+    '3 series','316','318','320','323','325','328','330','335','340','4 series', '420','428','430','5 series','518','520','523','524','525','528','530','530e', '535','535GT', '540', '550', '6 series', '630', '640', '650', '7 series', '728','730','735','740','745','750','760','M series', 'M3', 'M5', 'M6', 'X5 M', 'X6 M', 'X series', 'X1','X2','X3','X4','X5','X6','X7', 'Z series', 'Z3', 'Z4', 'i8'
+  ]
+  const buickModels = [
+    'Encore', 'LaCrosse'
+  ]
   let carModelList = []
 
   switch(makebrand){
@@ -92,6 +107,21 @@ function modelSearch(makebrand){
       break;
     case 'Alfa Romeo':
       carModelList = alfaromeoModels
+      break;
+    case 'Aston Martin':
+      carModelList = astonmartinModels;
+      break;
+    case 'Audi':
+      carModelList = audiModels
+      break;
+    case 'Bentley':
+      carModelList = bentleyModels
+      break;
+    case 'BMW':
+      carModelList = bmwModels
+      break;
+    case 'Buick':
+      carModelList = buickModels
       break;
   }
 
@@ -143,6 +173,7 @@ function showMake(list){
   modelList.html(listData)
 }
 }
+
 
 })
 

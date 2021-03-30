@@ -81,6 +81,7 @@
         height: auto;
         width: auto;
         display: none;
+        padding: 5px 0;
         box-shadow: 0 0 30px 2px rgb(58, 56, 56);
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -88,7 +89,7 @@
           padding: 8px;
         }
         li.hover {
-          background-color: $lightGrey;
+          background-color: $lighterGrey;
         }
       }
     }
