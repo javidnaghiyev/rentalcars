@@ -1,0 +1,65 @@
+@import "config";
+@import "utilities";
+
+fieldset {
+  border: none;
+  margin-bottom: 5px;
+}
+
+.uploadWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .information {
+    margin-top: 20px;
+    width: 600px;
+  }
+  .container {
+    width: 600px;
+    height: auto;
+    background-color: $container;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 10px 15px;
+    fieldset,
+    .d-flex {
+      margin: 10px 0;
+    }
+    textarea {
+      resize: none;
+      outline: none;
+      border: 1px solid $lightGrey;
+      border-radius: 5px;
+      padding: 5px;
+      &:focus {
+        border: 1px solid $blueAccent;
+      }
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  .formGroup {
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 49%;
+    input {
+      width: 90%;
+      height: calc(1.5em + 0.75rem + 2px);
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid $lightGrey;
+      padding: 0 5px;
+      &:focus {
+        border: 1px solid $blueAccent;
+      }
+    }
+  }
+}

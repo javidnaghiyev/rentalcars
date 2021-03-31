@@ -19,4 +19,20 @@ $(document).ready(function(){
             border: 'none'
         })
     })
+
+
+    //toggle profile option if logged in
+    function profileShow(){
+        let isLogged = false;
+        if(isLogged){
+            $('.loginWrapper').hide()
+        }
+
+    }
+    profileShow()
+
+    function media768(){
+        
+    }
+    media768();
 })

@@ -1,7 +1,7 @@
 $darkBlue: #12232e;
-$lighterBlue: #b51c14;
+
 $lightestBlue: #c74c4c;
-$shadowLightBlue: #690500;
+
 $lightGrey: #a8a8a8;
 $lighterGrey: #ddd;
 
@@ -9,4 +9,8 @@ $white: #ffffff;
 $blackText: #121214;
 $greenAccent: #4ad493;
 $blueAccent: #05f;
+$lighterBlue: rgb(100, 151, 255);
+$hoverLighterBlue: darken($lighterBlue, 10);
+$container: #eee;
+
 $lightBorder: 1px solid rgba(0, 0, 0, 0.1);

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $("header").load('header.html')
 
     $(".preloadExterior :nth-child(3) > img").css({
@@ -8,9 +8,8 @@ $(document).ready(function(){
     $(".preloadInterior :nth-child(5) > img").css({
         borderBottomRightRadius: '5px'
     })
-    
 
-    $(".carPhotos img").on('click', function(){
+    $(".carPhotos img").on('click', function () {
         let imagesrc = $(this).attr('src')
         $('#mask').addClass('fade-in')
         $('.mask').css({
@@ -20,8 +19,8 @@ $(document).ready(function(){
 
     $("img").attr('loading', 'lazy')
 
-    $(document).on('keyup', function(e){
-        if (e.key === 'Escape'){
+    $(document).on('keyup', function (e) {
+        if (e.key === 'Escape') {
             $('.mask').css({
                 display: 'none'
             })
@@ -29,7 +28,7 @@ $(document).ready(function(){
     })
 
     //hide draggable album when display > 768
-    
+
     //start flickity
 
 
@@ -39,8 +38,8 @@ $(document).ready(function(){
     const fifthChildRightBottom = $(".preloadInterior :nth-child(5)")
     const thirdChildRightBottom = $(".preloadInterior :nth-child(3)")
 
-    function hideSecondColumn(){
-        if(window.innerWidth < 1330){
+    function hideSecondColumn() {
+        if (window.innerWidth < 1330) {
             thirdChildRightAbove.hide()
             thirdChildRightBottom.hide()
             fifthChildRightAbove.hide()
@@ -50,9 +49,9 @@ $(document).ready(function(){
                 borderTopRightRadius: '5px'
             })
 
-             $(".preloadInterior :nth-child(4) > img").css({
-                   borderBottomRightRadius: '5px'
-                 })
+            $(".preloadInterior :nth-child(4) > img").css({
+                borderBottomRightRadius: '5px'
+            })
 
 
             $(".preloadExterior :nth-child(2), .preloadExterior :nth-child(3)").css({
@@ -63,7 +62,7 @@ $(document).ready(function(){
                 marginBottom: '0'
             })
         }
-        if(window.innerWidth > 768){
+        if (window.innerWidth > 768) {
             $('.carPhotos768').flickity({
                 freeScroll: true,
                 contain: true,
@@ -73,8 +72,8 @@ $(document).ready(function(){
             })
             $('.carPhotos768').hide()
         }
-        
-        if (window.innerWidth < 768){
+
+        if (window.innerWidth < 768) {
             $('.carPhotos').hide()
             $('.carPhotos768').show()
             $('.carPhotos768').flickity({
@@ -85,50 +84,53 @@ $(document).ready(function(){
                 pageDots: false
             })
 
-            
+
         }
-        
+
     }
     hideSecondColumn();
-//add as much margin + 4px to the left of the exterior images as the width of the main image
+    //add as much margin + 4px to the left of the exterior images as the width of the main image
     let heroSize = $('#heroCarousel img').width()
     let interiorWrapSize = $('.preloadExterior768').width()
-    let leftForInterior768 = heroSize + interiorWrapSize + 3
-            $('.preloadExterior768').css({
-                left: `${heroSize}`+'px'
-            })
-            $('.preloadInterior768').css({
-                left: `${leftForInterior768}`+'px'
-            })
-    
-    $(window).on('resize',function(){
-        //this one prevents flickity from changing it when resizing
-            $('.preloadExterior768').css({
-                left: `${heroSize}`+'px'
-            })
-            $('.preloadInterior768').css({
-                left: `${leftForInterior768}`+'px'
-            })
+    let leftForInterior768 = heroSize + interiorWrapSize
+    $('.preloadExterior768').css({
+        left: `${heroSize}` + 'px'
+    })
+    $('.preloadInterior768').css({
+        left: `${leftForInterior768+3}` + 'px'
+    })
 
-        if (window.innerWidth > 1330){
+    $(window).on('resize', function () {
+        var heroSize = $('#heroCarousel img').width()
+        var interiorWrapSize = $('.preloadExterior768').width()
+        var leftForInterior768 = heroSize + interiorWrapSize
+        //this one prevents flickity from changing it when resizing
+        $('.preloadExterior768').css({
+            left: `${heroSize}` + 'px'
+        })
+        $('.preloadInterior768').css({
+            left: `${leftForInterior768+3}` + 'px'
+        })
+
+        if (window.innerWidth > 1330) {
             thirdChildRightAbove.show();
             thirdChildRightBottom.show();
             fifthChildRightAbove.show();
             fifthChildRightBottom.show();
-            
+
         }
-        if(window.innerWidth < 1330){
+        if (window.innerWidth < 1330) {
             thirdChildRightAbove.hide();
             thirdChildRightBottom.hide();
             fifthChildRightAbove.hide();
             fifthChildRightBottom.hide();
         }
-        if(window.innerWidth > 768){
+        if (window.innerWidth > 768) {
             $('.carPhotos').show()
             $('.carPhotos768').hide()
         }
 
-        if(window.innerWidth < 768){
+        if (window.innerWidth < 768) {
             $('.carPhotos').hide()
             $('.carPhotos768').show()
             $('.carPhotos768').flickity({
@@ -139,7 +141,7 @@ $(document).ready(function(){
                 pageDots: false
             })
 
-            
+
         }
     })
 
