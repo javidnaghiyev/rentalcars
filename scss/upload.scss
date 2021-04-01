@@ -32,6 +32,7 @@ fieldset {
       border: 1px solid $lightGrey;
       border-radius: 5px;
       padding: 5px;
+      width: 95%;
       &:focus {
         border: 1px solid $blueAccent;
       }
@@ -59,6 +60,120 @@ fieldset {
       padding: 0 5px;
       &:focus {
         border: 1px solid $blueAccent;
+      }
+    }
+  }
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 49%;
+  label {
+    margin-right: 10px;
+  }
+  input {
+    margin-right: 5px;
+  }
+}
+
+#shekilFieldset {
+  border: 1px dashed $lightGrey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.submitButtonWrapper {
+  #submitButton {
+    width: 122px;
+    height: 46px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    outline: none;
+    background-color: $lighterBlue;
+    border-radius: 5px;
+    &:hover {
+      background-color: $hoverLighterBlue;
+    }
+  }
+}
+
+// @media (max-width: 650px) {
+//   .uploadWrapper {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     width: 100%;
+//     form {
+//       width: 50%;
+//     }
+//   }
+//   .container {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100% !important;
+//   }
+//   .d-flex {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     .formGroup {
+//       width: 100%;
+//       input {
+//         width: 100%;
+//         height: calc(1.5em + 0.75rem + 2px);
+//         outline: none;
+//         border-radius: 5px;
+//         border: 1px solid $lightGrey;
+//         padding: 0 5px;
+//         &:focus {
+//           border: 1px solid $blueAccent;
+//         }
+//       }
+//       textarea {
+//         columns: 20;
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 650px) {
+  .uploadWrapper {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .information {
+        padding: 0 5px;
+        width: 100%;
+        text-align: justify;
+      }
+      .container {
+        width: 100% !important;
+        flex-direction: column;
+        .d-flex {
+          flex-direction: column;
+          .formGroup {
+            width: 100%;
+          }
+          input {
+            width: 100% !important;
+          }
+        }
+        fieldset {
+          textarea {
+            width: 100%;
+          }
+        }
       }
     }
   }

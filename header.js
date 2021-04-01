@@ -31,8 +31,12 @@ $(document).ready(function(){
     }
     profileShow()
 
-    function media768(){
-        
+    if(window.location.pathname === '/upload.html'){
+        $('.loginWrapper').css({
+            opacity: '0'
+        })
+        $('.loginWrapper *').css({
+            display: 'none'
+        })
     }
-    media768();
 })
