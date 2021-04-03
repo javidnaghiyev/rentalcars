@@ -1,7 +1,6 @@
 @import "utilities";
 @import "config";
 @import "header";
-
 .main-carousel {
   height: 630px;
 }
@@ -91,6 +90,18 @@
         li.hover {
           background-color: $lighterGrey;
         }
+      }
+      #yearLabel {
+        height: 100%;
+        margin-top: 8px;
+      }
+      select {
+        width: 90%;
+        height: 100%;
+        float: right;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid $blueAccent;
       }
     }
     button {
@@ -244,6 +255,87 @@
             padding-right: 30px;
             word-break: break-word;
             font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .main-carousel {
+    height: 570px;
+  }
+  .searchText {
+    h1 {
+      font-size: 3.5rem !important;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .main-carousel {
+    height: 500px;
+  }
+  .searchText {
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  .productGrid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #hotCars {
+    width: 100% !important;
+    .productGrid {
+      grid-template-columns: 1fr !important;
+      .preloadWrap,
+      img {
+        border-radius: 0 !important;
+      }
+      .productItem {
+        .metadata {
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .bigSearchWrapper {
+    .searchText {
+      display: none;
+    }
+    .bigSearch {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      border-radius: 5px;
+      padding: 15px 0;
+      .searchFlex {
+        flex-direction: column;
+        height: auto;
+        .where {
+          width: 90%;
+          height: 25%;
+          margin: 10px 0;
+          border-right: none;
+          border-bottom: 2px solid $blueAccent;
+          #yearLabel {
+            margin: 0;
+          }
+          select {
+            border: none;
           }
         }
       }

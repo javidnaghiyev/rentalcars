@@ -61,6 +61,10 @@ a:hover {
     }
   }
 
+  .hamburgerWrapper {
+    display: none;
+  }
+
   .loginWrapper {
     .loginButtonWrapper {
       background-color: $lighterBlue;
@@ -135,6 +139,111 @@ a:hover {
         height: 100%;
         width: 100%;
       }
+    }
+  }
+
+  .firstHeader {
+    .headerLinksWrapper {
+      .headerLinks {
+        display: none;
+      }
+    }
+    .logoWrapper {
+      order: 2;
+    }
+    .loginWrapper {
+      order: 3;
+    }
+
+    .hamburgerWrapper {
+      display: block;
+      .hamburgerLines {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        * {
+          transition: all 0.2s;
+        }
+      }
+      #hl2 {
+        margin: 3px 0;
+      }
+      .hl1a {
+        transform: rotate(45deg);
+        transition: all 0.2s linear;
+        top: 2px;
+      }
+      .hl2a {
+        display: none;
+        transition: all 0.2s linear;
+      }
+      .hl3a {
+        transform: rotate(-45deg);
+        transition: all 0.2s linear;
+        bottom: 1px;
+      }
+      .hl1ab {
+        animation-name: hl1;
+        animation-fill-mode: backwards;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-duration: 0.2s;
+        transform-origin: center left;
+      }
+      .hl2ab {
+        animation-name: hl2;
+        animation-fill-mode: backwards;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-duration: 0.2s;
+        transform-origin: center left;
+      }
+      .hl3ab {
+        animation-name: hl3;
+        animation-fill-mode: backwards;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-duration: 0.2s;
+        transform-origin: center left;
+      }
+    }
+  }
+
+  .mobileHeaderLinksWrapper {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    height: 0;
+    transition: all 0.2s linear;
+  }
+
+  @keyframes hl1 {
+    from {
+      transform: rotate(0deg);
+      bottom: 0;
+    }
+    to {
+      transform: rotate(45deg);
+      bottom: 2px;
+    }
+  }
+  @keyframes hl2 {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes hl3 {
+    from {
+      transform: rotate(0deg);
+      top: 0;
+    }
+    to {
+      transform: rotate(-45deg);
+      top: 3px;
     }
   }
 }

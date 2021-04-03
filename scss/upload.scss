@@ -102,46 +102,6 @@ fieldset {
   }
 }
 
-// @media (max-width: 650px) {
-//   .uploadWrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-//     width: 100%;
-//     form {
-//       width: 50%;
-//     }
-//   }
-//   .container {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100% !important;
-//   }
-//   .d-flex {
-//     display: flex;
-//     flex-direction: column;
-//     width: 100%;
-//     .formGroup {
-//       width: 100%;
-//       input {
-//         width: 100%;
-//         height: calc(1.5em + 0.75rem + 2px);
-//         outline: none;
-//         border-radius: 5px;
-//         border: 1px solid $lightGrey;
-//         padding: 0 5px;
-//         &:focus {
-//           border: 1px solid $blueAccent;
-//         }
-//       }
-//       textarea {
-//         columns: 20;
-//       }
-//     }
-//   }
-// }
-
 @media (max-width: 650px) {
   .uploadWrapper {
     width: 100%;
