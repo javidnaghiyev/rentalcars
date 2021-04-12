@@ -113,6 +113,58 @@
   top: 0;
   left: 0;
 }
+.params {
+  padding: 0 3%;
+  width: 65%;
+  display: flex;
+  dl {
+    width: 49%;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    &:first-of-type {
+      border: 1px solid #ebebeb;
+      border-bottom: 0;
+      border-radius: 6px 0 0 6px;
+    }
+    &:last-of-type {
+      dt {
+        &:first-of-type {
+          border-radius: 0;
+          border-top: 1px solid #ebebeb;
+        }
+      }
+      dd {
+        border-right: 1px solid #ebebeb;
+        &:first-of-type {
+          border-top-right-radius: 6px;
+          border-top: 1px solid #ebebeb;
+        }
+        &:last-of-type {
+          border-bottom-right-radius: 6px;
+        }
+      }
+    }
+    dt {
+      width: 33%;
+      padding-left: 16px;
+      font-size: 15px;
+      line-height: 41px;
+      border-bottom: 1px solid #ebebeb;
+      background-color: #f7f7f7;
+      &:first-of-type {
+        border-top-left-radius: 6px;
+      }
+    }
+    dd {
+      width: 66%;
+      padding-left: 16px;
+      font-size: 15px;
+      line-height: 41px;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}
 
 @media (max-width: 1330px) {
   .carPhotos {
@@ -132,6 +184,9 @@
         }
       }
     }
+  }
+  .params {
+    width: 75%;
   }
 }
 
@@ -212,6 +267,9 @@
         }
       }
     }
+  }
+  .params {
+    width: 100%;
   }
 }
 

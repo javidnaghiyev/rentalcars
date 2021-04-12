@@ -216,6 +216,18 @@ a:hover {
     position: relative;
     height: 0;
     transition: all 0.2s linear;
+    & > div {
+      padding: 20px;
+      display: none;
+      ul {
+        li {
+          margin: 15px 0;
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 
   @keyframes hl1 {
@@ -244,6 +256,15 @@ a:hover {
     to {
       transform: rotate(-45deg);
       top: 3px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileHeaderLinksWrapper {
+    display: none;
+    & * {
+      display: none;
     }
   }
 }

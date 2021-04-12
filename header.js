@@ -63,6 +63,7 @@ $(document).ready(function(){
             
         }
     }
+    
     $('.hamburgerWrapper').on('click', hamburgerAnimation)
 
     $('.hamburgerWrapper').on('click', function(){
@@ -70,9 +71,15 @@ $(document).ready(function(){
             $('.mobileHeaderLinksWrapper').css({
                 height: '200px'
             })
+            $('.mobileHeaderLinksWrapper div').css({
+                display: 'block'
+            })
         }else{
             $('.mobileHeaderLinksWrapper').css({
                 height: '0'
+            })
+            $('.mobileHeaderLinksWrapper div').css({
+                display: 'none'
             })
         }
     })

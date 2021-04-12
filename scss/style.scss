@@ -342,3 +342,12 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .carousel-cell {
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+}
